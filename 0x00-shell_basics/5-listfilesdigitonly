@@ -1,2 +1,1 @@
 #!/bin/bash
-ls -lhnd .* * | awk '{if ($9 == ".") print "total " $5; else print}' | tail -n +2
