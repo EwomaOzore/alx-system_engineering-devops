@@ -1,2 +1,2 @@
 #!/bin/bash
-{ find . -maxdepth 1 -name '[!.]*' -type f -exec printf "%s, " {} \; && find . -maxdepth 1 -name '[!.]*' -type d -exec printf "%s/, " {} \; ; } | awk '{ gsub(/,$/, "\n"); print }'
+{ find . -maxdepth 1 -name '[!.]*' -type f -exec printf "%s, " {} \ find . -maxdepth 1 -name '[!.]*' -type d -exec printf "%s/, " {} \ } | awk '{ gsub(/,$/, "\n"); print }'
