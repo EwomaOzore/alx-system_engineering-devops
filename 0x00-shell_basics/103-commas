@@ -1,2 +1,2 @@
 #!/bin/bash
-ls -A1 | sort -df | awk '{ORS = (NR % 2 == 0) ? ", " : "\n"; print}'
+ls -A1 | awk '{ORS = NR % 2 ? ", " : "\n"}1'
