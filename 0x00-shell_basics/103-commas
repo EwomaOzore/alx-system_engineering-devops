@@ -1,2 +1,2 @@
 #!/bin/bash
-(echo -n "./, ../, "; ls -A1 | sort -df) | awk '{ORS = NR % 2 ? ", " : "\n"}1'
+{ echo -n "./, ../, "; ls -A1 | sort -df | tr '\n' ','; echo ""; }
