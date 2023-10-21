@@ -1,0 +1,1 @@
+ls -Ap | awk 'BEGIN {ORS=", "}; {if ($0 != "./" && $0 != "../") print}'
