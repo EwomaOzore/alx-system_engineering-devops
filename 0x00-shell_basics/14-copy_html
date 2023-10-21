@@ -1,0 +1,4 @@
+#!/bin/bash
+source_dir="./"
+destination_dir="../"
+rsync -u --exclude="*" --include="*.html" "$source_dir" "$destination_dir"
