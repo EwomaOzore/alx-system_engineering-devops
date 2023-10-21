@@ -1,2 +1,2 @@
 #!/bin/bash
-ls -Ap | sort -d | tr '\n' ','
+{ echo -n "./, ../,"; ls -Ap | grep -v '/$' | sort -d | tr '\n' ','; } | sed 's/,$/\n/'
