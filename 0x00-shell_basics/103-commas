@@ -1,1 +1,2 @@
-ls -a | awk '{if (NR>2) { printf ", "; } if ($1 ~ /^[0-9a-zA-Z]/) { printf "%s", $0; } else if (NR>2) { printf "/%s", $0; }} END { printf "\n"; }'
+#!/bin/bash
+ls -ap1 | tr '\n' ',' | sed 's/,$/\n/'
