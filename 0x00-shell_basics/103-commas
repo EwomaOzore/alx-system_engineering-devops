@@ -1,2 +1,0 @@
-#!/bin/bash
-{ for item in ./* do echo -n "$(basename "$item"), " done | sed -e 's/^\.\//.\/, /' | LC_COLLATE=C sort | awk '{gsub(/,$/,""); print }'
