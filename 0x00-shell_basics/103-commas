@@ -1,2 +1,2 @@
 #!/bin/bash
-(echo -n "./, ../, "; ls -A1 | sort -df | tr '\n' ',') | sed 's/,$/\n/'
+ls -ap1 | sort -k1,1 | awk '{if ($1 == "." || $1 == "..") {printf $1", ";} else {if ($1 ~ /^[0-9A-Za-z]/) {printf $1", ";} else {sub(".", "&/", $1); printf $1", ";}}}' | tr -d '\n' && echo
