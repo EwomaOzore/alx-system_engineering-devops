@@ -1,2 +1,2 @@
 #!/bin/bash
-ls -ap1 | sed ':a;N;$!ba;s/\n/, /g' | sed -e 's/,$/\n/'
+find . -maxdepth 1 -name '[!.]*' -type d -exec printf '{}, ' \; | awk '{gsub(/,$/,"\n")} 1' ; find . -maxdepth 1 -name '[!.]*' -type f -o -name '[!.]*' -type d -printf '%f, ' | sort -t '-' -k 2,2 -k 1,1 | awk '{gsub(/,$/,"\n")} 1'
