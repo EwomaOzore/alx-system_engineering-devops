@@ -1,2 +1,2 @@
 #!/bin/bash
-{ echo -n "./, ../, "; ls -A1 | sort -df | tr '\n' ','; echo ""; }
+(echo -n "./, ../, "; ls -A1 | sort -df | tr '\n' ',') | sed 's/,$/\n/'
